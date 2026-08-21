@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 type PageName = "home" | "research" | "blog";
 
 const socialLinks = [
@@ -15,7 +13,7 @@ export function SiteHeader({ current }: { current: PageName }) {
   return (
     <header className="siteHeader shell">
       <div className="profile">
-        <Link href="/" aria-label="Joshua Placidi, home">
+        <a href="/" aria-label="Joshua Placidi, home">
           <img
             className="profilePhoto"
             src="/me.jpg"
@@ -23,11 +21,11 @@ export function SiteHeader({ current }: { current: PageName }) {
             width="128"
             height="128"
           />
-        </Link>
+        </a>
         <div>
-          <Link className="profileName" href="/">
+          <a className="profileName" href="/">
             Joshua Placidi
-          </Link>
+          </a>
           <div className="socialLinks">
             {socialLinks.map((link) => (
               <a href={link.href} target="_blank" rel="noreferrer" key={link.label}>
@@ -39,9 +37,9 @@ export function SiteHeader({ current }: { current: PageName }) {
       </div>
 
       <nav className="pageNav" aria-label="Primary navigation">
-        <Link className={current === "home" ? "active" : ""} href="/">Home</Link>
-        <Link className={current === "research" ? "active" : ""} href="/research">Research</Link>
-        <Link className={current === "blog" ? "active" : ""} href="/blog">Blog</Link>
+        <a className={current === "home" ? "active" : ""} href="/">Home</a>
+        <a className={current === "research" ? "active" : ""} href="/research/">Research</a>
+        <a className={current === "blog" ? "active" : ""} href="/blog/">Blog</a>
         <a href="/Joshua-Placidi-CV.pdf" target="_blank" rel="noreferrer">CV ↗</a>
       </nav>
     </header>
