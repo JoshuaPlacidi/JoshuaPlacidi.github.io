@@ -1,0 +1,160 @@
+@import "tailwindcss";
+
+:root {
+  --paper: #f3f1ea;
+  --ink: #181914;
+  --muted: #6c6d64;
+  --line: #c9c8bf;
+  --accent: #a43f2b;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Arial, Helvetica, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+a { color: inherit; text-decoration: none; }
+::selection { background: var(--ink); color: var(--paper); }
+.shell { width: min(1320px, calc(100% - 64px)); margin-inline: auto; }
+
+.siteHeader {
+  min-height: 176px;
+  padding-block: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  border-bottom: 1px solid var(--ink);
+}
+.profile { display: flex; align-items: center; gap: 22px; }
+.profilePhoto {
+  display: block;
+  width: 112px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 36%;
+  filter: saturate(.82) contrast(.96);
+}
+.profileName {
+  display: inline-block;
+  margin-bottom: 15px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(29px, 4vw, 43px);
+  line-height: 1;
+  letter-spacing: -.045em;
+}
+.socialLinks { display: flex; flex-wrap: wrap; gap: 8px; }
+.socialLinks a {
+  padding: 6px 9px 5px;
+  border: 1px solid var(--line);
+  font-family: var(--font-geist-mono), monospace;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+  transition: border-color .18s ease, color .18s ease;
+}
+.socialLinks a:hover { color: var(--accent); border-color: var(--accent); }
+.pageNav {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 10px;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.pageNav a { padding-bottom: 4px; border-bottom: 1px solid transparent; }
+.pageNav a:hover, .pageNav a.active { color: var(--accent); border-color: currentColor; }
+
+.page {
+  min-height: calc(100svh - 176px);
+  padding-block: clamp(64px, 8vh, 110px);
+}
+.intro { width: 100%; }
+.pageLabel {
+  margin: 0;
+  font-family: var(--font-geist-mono), monospace;
+  color: var(--accent);
+  font-size: 10px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.introContent {
+  margin-top: 0;
+}
+h1 {
+  margin: 0;
+  max-width: 1040px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(32px, 3.8vw, 44px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -.045em;
+}
+.introCopy {
+  max-width: 900px;
+  margin-top: 42px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+.introCopy p { margin: 0 0 20px; }
+.introCopy p:last-child { margin-bottom: 0; }
+
+.pageTitle {
+  margin-bottom: 62px;
+}
+.pageTitle h1 { max-width: none; font-size: clamp(38px, 5vw, 54px); }
+.entryList { display: grid; gap: 52px; }
+.entry {
+  display: grid;
+  grid-template-columns: 46px 1fr 205px 18px;
+  gap: 24px;
+  align-items: center;
+  transition: color .18s ease;
+}
+.entry:hover { color: var(--accent); }
+.entryNumber, .entryMeta {
+  font-family: var(--font-geist-mono), monospace;
+  color: var(--muted);
+  font-size: 9px;
+  letter-spacing: .06em;
+  line-height: 1.55;
+  text-transform: uppercase;
+}
+.entryMain h2 {
+  margin: 0 0 9px;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(22px, 3vw, 33px);
+  font-weight: 400;
+  line-height: 1.12;
+  letter-spacing: -.03em;
+}
+.entryMain p { margin: 0; color: var(--muted); font-size: 12px; line-height: 1.5; }
+.entryMeta { margin: 0; text-align: right; }
+.entryArrow { font-size: 14px; }
+.blogEntry { min-height: 90px; }
+
+@media (max-width: 760px) {
+  .shell { width: calc(100% - 28px); }
+  .siteHeader { padding-block: 25px; align-items: flex-start; flex-direction: column; gap: 24px; }
+  .profilePhoto { width: 84px; }
+  .profileName { font-size: 31px; margin-bottom: 11px; }
+  .pageNav { width: 100%; justify-content: space-between; gap: 12px; }
+  .page { padding-block: 38px 70px; }
+  .introContent { margin-top: 0; }
+  .introCopy { margin-top: 32px; }
+  h1 { font-size: clamp(31px, 8.5vw, 40px); }
+  .pageTitle h1 { font-size: clamp(36px, 10vw, 46px); }
+  .pageTitle { margin-bottom: 42px; }
+  .entryList { gap: 42px; }
+  .entry { grid-template-columns: 27px 1fr 14px; gap: 12px; align-items: start; }
+  .entryMeta { grid-column: 2; text-align: left; }
+  .entryArrow { grid-column: 3; grid-row: 1; }
+}
