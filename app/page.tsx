@@ -13,7 +13,6 @@ export default function Home() {
       <main className="page shell">
         <section className="intro">
           <div className="introContent">
-            <h1>Machine learning researcher building (artificially) intelligent systems to solve hard problems efficiently.</h1>
             <div className="introCopy">
               <p>
                 I am a PhD researcher in the Brain and Behaviour Lab at Imperial

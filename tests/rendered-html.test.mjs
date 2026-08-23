@@ -29,7 +29,8 @@ test("server-renders the portfolio homepage", async () => {
 
   const html = await response.text();
   assert.match(html, /<title>Joshua Placidi<\/title>/i);
-  assert.match(html, /Machine learning researcher building/);
+  assert.match(html, /I am a PhD researcher/);
+  assert.doesNotMatch(html, /Machine learning researcher building/);
   assert.match(html, /href="\/research"/);
   assert.match(html, /href="\/blog"/);
   assert.doesNotMatch(html, /codex-preview|react-loading-skeleton/i);

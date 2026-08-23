@@ -99,7 +99,7 @@ h1 {
 }
 .introCopy {
   max-width: 800px;
-  margin: 36px auto 0;
+  margin: 0 auto;
   color: var(--ink);
   font-size: clamp(17px, .5vw + .9rem, 19px);
   line-height: 1.75;
@@ -150,7 +150,6 @@ h1 {
   .profileName { font-size: 31px; margin-bottom: 11px; }
   .pageNav { width: 100%; justify-content: space-between; gap: 12px; }
   .page { padding-block: 38px 70px; }
-  .introCopy { margin-top: 30px; }
   .pageTitle { margin-bottom: 42px; }
   .entryList { gap: 40px; }
   .entry { grid-template-columns: 27px 1fr 14px; gap: 12px; align-items: start; }
