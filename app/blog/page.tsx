@@ -11,13 +11,13 @@ const posts = [
     title: "A Life Is Worth 10ˣ Tokens",
     description: "Scaling to human intelligence.",
     year: "2026",
-    href: "https://medium.com/@joshuaplacidi/a-life-is-worth-10-x-tokens-9be0f05886c7",
+    href: "https://joshuaplacidi.substack.com/p/a-life-is-worth-10x-tokens",
   },
   {
     title: "How to Read an Artificial Brain",
     description: "An introduction to attribution graphs (Anthropic 2025).",
     year: "2025",
-    href: "http://medium.com/@joshuaplacidi/how-to-read-an-artificial-neural-brain-6e092f09b9f1",
+    href: "https://joshuaplacidi.substack.com/p/attribution-graphs-how-to-read-an",
   },
 ];
 
