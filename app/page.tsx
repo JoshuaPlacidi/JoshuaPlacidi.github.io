@@ -8,9 +8,15 @@ export const metadata: Metadata = {
 
 const updates: { when: string; date: string; text: string; href?: string }[] = [
   {
+    when: "October 2026",
+    date: "2026-10",
+    text: "🇦🇺 Two Papers Accepted: WMHS and InfPriv Workshops @ NeurIPS 2026",
+    href: "/research",
+  },
+  {
     when: "July 2026",
     date: "2026-07",
-    text: "🇰🇷 New Papers: EHR Foundation Models at SD4H @ ICML 2026",
+    text: "🇰🇷 Two Papers Accepted: SD4H Workshop @ ICML 2026",
     href: "https://lnkd.in/p/eqGGqVHN",
   },
   {
