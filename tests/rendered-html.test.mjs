@@ -50,7 +50,7 @@ test("server-renders the research and blog collections", async () => {
     blogResponse.text(),
   ]);
 
-  assert.match(researchHtml, /Selected papers/);
+  assert.match(researchHtml, /Publications/);
   assert.match(researchHtml, /Pretraining EHR Foundation Models/);
   assert.match(blogHtml, /Writings/);
   assert.match(blogHtml, /A Life Is Worth 10/);
