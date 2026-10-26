@@ -28,7 +28,6 @@ const papers: {
     venue: "WMHS Workshop @ NeurIPS",
     year: "2026",
     href: "https://arxiv.org/abs/2610.29533",
-    status: "Camera-ready forthcoming",
   },
   {
     title: "Constructing and Validating Memorisation Audits for EHR Foundation Models",
