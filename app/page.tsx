@@ -9,6 +9,12 @@ export const metadata: Metadata = {
 const updates: { when: string; date: string; text: string; href?: string }[] = [
   {
     when: "October 2026",
+    date: "2026-10-25",
+    text: "🧬 Hackathon: Autonomous AI Research for Protein Binding Prediction",
+    href: "https://joshuaplacidi.com/auto-research-protein-binding/",
+  },
+  {
+    when: "October 2026",
     date: "2026-10",
     text: "🇦🇺 Two Papers Accepted: WMHS and InfPriv Workshops @ NeurIPS 2026",
     href: "/research",
